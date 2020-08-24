@@ -1,0 +1,435 @@
+
+
+body {
+    background: linear-gradient(45deg, #13495f, #764be2, #8373c6, #77d3b9);
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 3rem 0;
+    margin: 0;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+  }
+  
+  .containerv2 {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .mobile-wrapperv2 {
+    background: #fff;
+    /* relative with .today-boxv2::before*/
+    z-index: 1;
+    /*positive*/
+    position: relative;
+    /*---------*/
+    width: 380px;
+    min-height: 100%;
+    margin: auto;
+    padding: 10px 0 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px -10px #000;
+    overflow: hidden;
+  }
+  
+  .headerv2 {
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+  .headerv2 .containerv2 {
+    position: relative;
+  }
+  .headerv2 .containerv2 span {
+    color: #444;
+    font-family: 'Ramabhadra';
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .headerv2 .containerv2 h1 {
+    margin-top: 5px;
+    color: #919294;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .headerv2 .containerv2 .menu-togglev2 {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 50%;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 30px -14px #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .headerv2 .containerv2 .menu-togglev2 span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #777;
+    border-radius: 2px;
+    transition: all 300ms ease;
+  }
+  .headerv2 .containerv2 .menu-togglev2 span:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .headerv2 .containerv2 .menu-togglev2 span:first-child {
+    width: 20px;
+  }
+  .headerv2 .containerv2 .menu-togglev2 span:last-child {
+    width: 15px;
+  }
+  .headerv2 .containerv2 .menu-togglev2:hover span:first-child, .headerv2 .containerv2 .menu-togglev2:hover span:last-child {
+    width: 100%;
+  }
+  .headerv2 .containerv2::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left-color: #e8e8e8;
+    position: absolute;
+    bottom: -13px;
+    right: 0px;
+  }
+  .headerv2 .containerv2::after {
+    content: "";
+    display: block;
+    width: calc(100% - 10px);
+    height: 2px;
+    background-color: #e8e8e8;
+    position: relative;
+    top: 8px;
+  }
+  
+  .today-boxv2 {
+    background: linear-gradient(to left, #485fed, rgba(255, 44, 118, 0.25)), #485fed;
+    color: #FFF;
+    padding: 37px 40px;
+    position: relative;
+    box-shadow: 0px 0px 40px -9px #485fed;
+    margin-bottom: 50px;
+  }
+  .today-boxv2::before {
+    content: "";
+    background: linear-gradient(to left, #485fed, rgba(255, 44, 118, 0.25)), #485fed;
+    opacity: 0.4;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px 0 #485fed;
+  }
+  .today-boxv2 .breadcrumbv2 {
+    font-weight: 300;
+    position: relative;
+  }
+  .today-boxv2 .breadcrumbv2::after {
+    content: "\f3d1";
+    font-family: 'Ionicons';
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 100;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 45px;
+    top: 3px;
+  }
+  .today-boxv2 .date-titlev2 {
+    font-size: 20px;
+    margin: 7px 0 0 0;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  }
+  .today-boxv2 .plus-iconv2 {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px -14px #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    cursor: pointer;
+    transition: all 350ms ease;
+    transition-timing-function: cubic-bezier(0.05, 1.8, 1, 1.57);
+  }
+  .today-boxv2 .plus-iconv2:hover {
+    transform: translateY(-40%);
+  }
+  .today-boxv2 .plus-iconv2 i {
+    font-size: 22px;
+    font-weight: 700;
+    background: #fff;
+    color: #777;
+    width: 45px;
+    height: 45px;
+    border: 6px solid #485fed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .today-boxv2 .plus-iconv2:active {
+    top: 52%;
+    transform: translatey(-52%);
+    right: 38px;
+    box-shadow: 0px 8px 30px -14px #000;
+  }
+  
+  .upcoming-eventsv2 .containerv2 h3 {
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .upcoming-eventsv2 .containerv2 h3::before {
+    content: "";
+    display: block;
+    width: 58%;
+    height: 2px;
+    background-color: #e8e8e8;
+    position: absolute;
+    top: 60%;
+    transform: translatey(-60%);
+    right: 0;
+  }
+  .upcoming-eventsv2 .containerv2 h3::after {
+    content: "\f3ff";
+    font-family: 'Ionicons';
+    color: rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+    font-size: 36px;
+    font-weight: 100;
+    display: inline-block;
+    background: #fff;
+    color: #919294;
+    width: 38px;
+    text-align: center;
+    position: absolute;
+    right: 60px;
+    top: -10px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 {
+    margin-bottom: 30px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event i {
+    font-size: 24px;
+    font-weight: 100;
+    position: absolute;
+    left: 0;
+    top: -4px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event .event__point {
+    margin: 0;
+    color: #555;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event .event__duration {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: #999;
+    font-size: 10px;
+    font-weight: 800;
+    font-style: italic;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event .event__description {
+    margin-top: 10px;
+    color: #919294;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active {
+    background: #e8e8e8;
+    padding: 17px 0 5px 60px;
+    margin-bottom: 38px;
+    border-radius: 5px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active i {
+    position: absolute;
+    left: 25px;
+    top: 17px;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active .event__description::before, .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active .event__description::after {
+    content: "\f3d1";
+    font-family: 'Ionicons';
+    font-size: 32px;
+    display: inline-block;
+    color: #919294;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active .event__description::before {
+    right: 45px;
+    font-size: 22px;
+    transition: all 550ms ease;
+    transition-timing-function: cubic-bezier(0.05, 1.8, 1, 1.57);
+  }
+  .upcoming-eventsv2 .containerv2 .events-wrapperv2 .event.active:hover .event__description::before {
+    transform: translate(15px, -12px);
+  }
+  
+  .hot {
+    color: #ee6b51;
+  }
+  
+  .done {
+    color: #999 !important;
+  }
+  
+  .icon-in-active-mode {
+    color: #43ff28;
+    font-size: 20px !important;
+  }
+  
+  .upcoming {
+    font-weight: bold;
+    color: #777;
+  }
+  
+  .add-event-buttonv2 {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    border: 0;
+    padding: 0;
+    background: linear-gradient(to left, #485fed, rgba(255, 44, 118, 0.25)), #485fed;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px -9px #485fed;
+  }
+  .add-event-buttonv2:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  .add-event-buttonv2 .add-event-button__titlev2 {
+    color: #FFF;
+    padding: 15px 18px 15px 23px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Lato';
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .add-event-buttonv2 .add-event-button__iconv2 {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0 17px 0 12px;
+    height: 100%;
+  }
+  .add-event-buttonv2 .add-event-button__iconv2 i {
+    margin: 0;
+    color: #fff;
+    font-size: 25px;
+    padding: 13px 0;
+  }
+   
+  
+  /* Button used to open the contact form - fixed at the bottom of the page */
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }

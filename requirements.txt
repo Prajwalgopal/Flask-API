@@ -1,0 +1,12 @@
+authlib==0.11
+flask==1.0.2
+requests
+jinja2
+werkzeug
+flask-session
+msal
+apiclient
+google-api-python-client
+flask_cors
+google-auth
+virtualenv

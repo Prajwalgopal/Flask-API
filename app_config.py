@@ -1,8 +1,8 @@
 import os
 
-CLIENT_ID = "4fa1fef0-b295-46b3-b384-4f5fedda4588" # Application (client) ID of app registration
+CLIENT_ID = "" # Application (client) ID of app registration
 
-CLIENT_SECRET = "10dKSnx-H.neqF_6-W_XDb5-.l5S8T5vr." # Placeholder - for use ONLY during testing.
+CLIENT_SECRET = "" # Placeholder - for use ONLY during testing.
 # In a production app, we recommend you use a more secure method of storing your secret,
 # like Azure Key Vault. Or, use an environment variable as described in Flask's documentation:
 # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
